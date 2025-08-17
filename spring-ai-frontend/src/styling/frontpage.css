@@ -1,0 +1,91 @@
+/* Full screen background with gradient */
+.frontpage {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #0d1b3d, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Content wrapper */
+.frontpage-content {
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.frontpage-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px #87cefa, 0 0 20px #4682b4;
+}
+
+.frontpage-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #dbeafe;
+}
+
+/* Buttons container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Buttons */
+.nav-button {
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #1e90ff, #00bfff);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.8);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button hover effect */
+.nav-button:hover {
+  background: linear-gradient(45deg, #00bfff, #1e90ff);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 25px rgba(30, 144, 255, 1);
+}
+
+/* ===== WAVE STYLING ===== */
+.wave-bg {
+  position: absolute;
+  bottom: 0;
+  width: 200%; /* wider for smooth animation */
+  height: 150px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave-svg {
+  position: relative;
+  width: 200%;
+  height: 100%;
+  animation: waveMove 8s linear infinite;
+}
+
+/* Animate wave left-right */
+@keyframes waveMove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
